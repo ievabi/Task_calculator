@@ -21,7 +21,21 @@ function updateScreen() {
 
 function operatorIsPressed(operator) {
     activeOperator = operator;
-    document.querySelector('.operator').className += ' selected';
+    console.log(activeOperator);
+    switch (activeOperator) {
+        case '+':
+            document.querySelector('.plus').classList.add('selected');
+            break;
+        case '-':
+            document.querySelector('.minus').classList.add('selected');
+            break;
+        case 'x':
+            document.querySelector('.multiply').classList.add('selected');
+            break;
+        case '/':
+            document.querySelector('.divide').classList.add('selected');
+            break;
+    }
     doMath();
     updateScreen();
     storedNumber = activeNumber;
@@ -32,8 +46,20 @@ function operatorIsPressed(operator) {
 function equalIsPressed() {
     doMath();
     storedNumber = '';
-    document.querySelector('.test').className = 'btn-style opera-bg operator test';
-
+    switch (activeOperator) {
+        case '+':
+            document.querySelector('.plus').classList.remove('selected');
+            break;
+        case '-':
+            document.querySelector('.minus').classList.remove('selected');
+            break;
+        case 'x':
+            document.querySelector('.multiply').classList.remove('selected');
+            break;
+        case '/':
+            document.querySelector('.divide').classList.remove('selected');
+            break;
+    }
 };
 
 function clearScreen() {
