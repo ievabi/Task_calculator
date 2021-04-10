@@ -21,15 +21,19 @@ function updateScreen() {
 
 function operatorIsPressed(operator) {
     activeOperator = operator;
+    document.querySelector('.operator').className += ' selected';
     doMath();
     updateScreen();
     storedNumber = activeNumber;
     activeNumber = '';
+
 }
 
 function equalIsPressed() {
     doMath();
     storedNumber = '';
+    document.querySelector('.test').className = 'btn-style opera-bg operator test';
+
 };
 
 function clearScreen() {
@@ -63,3 +67,5 @@ function doMath() {
         updateScreen();
     };
 };
+
+

@@ -125,7 +125,7 @@ button {
 
 .opera-bg:active {
     background:#333;
-    color:#fff;
+    color:rgb(218, 16, 16);
     font-size:26px;
     cursor: pointer;
     outline:none;
