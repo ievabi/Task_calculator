@@ -37,7 +37,6 @@ function operatorIsPressed(operator) {
             break;
     }
     doMath();
-    updateScreen();
     storedNumber = activeNumber;
     activeNumber = '';
 
